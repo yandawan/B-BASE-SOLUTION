@@ -1,0 +1,143 @@
+<mxfile host="65bd71144e">
+    <diagram id="r0wL2d53gjOig2e2TblL" name="Page-1">
+        <mxGraphModel dx="1598" dy="470" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="20">
+                    <mxGeometry x="0.08" y="-1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="前端" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="80" width="40" height="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="5 如果redis中也没有数据去后端服务中获取" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="32">
+                    <mxGeometry x="-0.411" y="-1" relative="1" as="geometry">
+                        <mxPoint x="72" y="-6" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="nginx" style="rounded=0;whiteSpace=wrap;html=1;horizontal=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="165" width="100" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="23">
+                    <mxGeometry x="-0.1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="html" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="195" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="6" target="7">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="260" y="340"/>
+                            <mxPoint x="480" y="340"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="29" value="4.0 本地缓存中没有 去redis中拿取" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="28">
+                    <mxGeometry x="-0.1217" y="-4" relative="1" as="geometry">
+                        <mxPoint x="24" y="-4" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="本地&lt;br&gt;缓存" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="235" y="260" width="50" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="6">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="320" y="265" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="470" y="285"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="4.1 从redis缓存中获取" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="30">
+                    <mxGeometry x="-0.5963" relative="1" as="geometry">
+                        <mxPoint x="-79" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="redis" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="245" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="7 写入redis中" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="57">
+                    <mxGeometry x="0.0919" y="2" relative="1" as="geometry">
+                        <mxPoint x="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="缓存数据产生服务" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="610" y="206.25" width="160" height="157.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="cache" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="237.5" width="80" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="商品服务" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="1030" y="176.25" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="店铺服务" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="1030" y="271.25" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="品牌服务" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="1030" y="366.25" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="15" target="2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="16">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="用户请求" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry y="240" width="50" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="MQ" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="850" y="349" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1020" y="274" as="sourcePoint"/>
+                        <mxPoint x="780" y="273.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="48" value="6 从后端服务获取数据 再写入缓存中" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="47">
+                    <mxGeometry x="0.0333" y="-1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="52" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1015" y="325.5" as="sourcePoint"/>
+                        <mxPoint x="780" y="325" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="56" value="6 先写入mq 再从mq写入缓存当中" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="52">
+                    <mxGeometry x="0.2174" y="-1" relative="1" as="geometry">
+                        <mxPoint x="30" y="3" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="59" value="1 如果html模板变了 不用全量重新渲染 直接将最新的html模板推送到nginx服务器上去就可以了&lt;br&gt;2 大量的情况下 数据是直接从nginx本地取的缓存 没有网络请求的开销 没有业务逻辑 渲染到模板中 html页面返回" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;dashed=1;align=left;fillColor=#e3c800;fontColor=#000000;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="-220" y="326.25" width="300" height="63.75" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="如果页面的数据有变更 及时监听到 并且写入缓存中 提高并发 高性能的访问" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;dashed=1;align=left;fillColor=#e3c800;fontColor=#000000;dashPattern=1 4;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="790" y="410" width="210" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="本地缓存有时间期限 10分钟" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;dashed=1;align=left;fillColor=#e3c800;fontColor=#000000;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="410" width="160" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
