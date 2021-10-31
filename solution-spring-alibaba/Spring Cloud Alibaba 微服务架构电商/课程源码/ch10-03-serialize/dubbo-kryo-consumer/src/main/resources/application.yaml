@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: dubbo-kryo-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+dubbo:
+  registry:
+    address: spring-cloud://localhost
+  protocol:
+    name: dubbo
+    port: -1

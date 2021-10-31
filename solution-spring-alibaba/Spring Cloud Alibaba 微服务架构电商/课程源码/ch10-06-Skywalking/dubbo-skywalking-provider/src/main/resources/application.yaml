@@ -1,0 +1,17 @@
+server:
+  port: 9092
+spring:
+  application:
+    name: dubbo-skywalking-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+dubbo:
+  registry:
+    address: spring-cloud://localhost
+  scan:
+    base-packages: com.example.demo.dubboservice
+  protocol:
+    name: dubbo
+    port: -1

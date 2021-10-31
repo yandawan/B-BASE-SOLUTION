@@ -26,6 +26,7 @@
         <module>eshop/eshop-datalink-service</module>
         <module>eshop/eureka-server</module>
         <module>eshop/eshop-one-service</module>
-        <module>solution-spring-alibaba/e-commerce-springcloud</module>
+        <module>solution-spring-alibaba/ecommerce-springcloud</module>
+        <module>solution-spring-alibaba/EShopParent</module>
     </modules>
 </project>

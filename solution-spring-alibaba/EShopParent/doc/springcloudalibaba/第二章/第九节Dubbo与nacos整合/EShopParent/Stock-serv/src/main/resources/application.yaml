@@ -1,0 +1,20 @@
+server:
+  port: 8002
+spring:
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        service: stock-serv
+  application:
+    name: stock-serv
+dubbo:
+  application:
+    id: stock-serv-provider
+    name: stock-serv-provider
+  registry:
+    address: nacos://localhost:8848
+  protocol:
+    name: dubbo
+    port: 20883
+    id: dubbo

@@ -1,0 +1,19 @@
+# todo [config] 2. nacos 新建配置，dataID：应用名.扩展名
+# todo [config] 3. 提取出公共配置 nacos 注册中心，nacos 新建配置，dataID：nacos-discovery.yaml
+# todo [config] 4. 配置 bootstrap.yaml
+# 配置：
+#（1）应用名
+#（2）nacos-config 地址
+#（3）文件扩展名
+#（4）引用公共配置 nacos-discovery.yaml
+
+spring:
+  application:
+    name: admin
+  cloud:
+    nacos:
+      config:
+        server-addr: server-base:8848
+        file-extension: yaml
+        ext-config:
+          - dataId: nacos-discovery.yaml

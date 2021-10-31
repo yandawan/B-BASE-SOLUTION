@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: filter-customize
+  cloud:
+    gateway:
+      routes:
+        - id: route-filter-customize
+          uri: http://localhost:8081/hi
+          predicates:
+            - Method=GET
+          filters:
+            - AddDebug=a,b

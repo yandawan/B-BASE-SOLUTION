@@ -1,0 +1,17 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8858
+        # 本地机器ip
+        client-ip: 192.168.0.118
+      filter:
+        enabled: false
+
+server:
+  port: 9000

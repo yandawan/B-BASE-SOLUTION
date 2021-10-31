@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: service-config
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yml
+        shared-dataids: service-config-shared.yml
+        ext-config:
+          - dataId: service-config-ext.yml
+
+test:
+  name: local-config

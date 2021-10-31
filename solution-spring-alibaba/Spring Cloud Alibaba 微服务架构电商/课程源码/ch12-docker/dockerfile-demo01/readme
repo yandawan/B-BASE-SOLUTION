@@ -1,0 +1,13 @@
+构建镜像
+
+```
+docker build -t mynginx .
+```
+
+运行容器
+
+```
+docker run -p 80:80 mynginx
+```
+
+访问 192.168.31.154

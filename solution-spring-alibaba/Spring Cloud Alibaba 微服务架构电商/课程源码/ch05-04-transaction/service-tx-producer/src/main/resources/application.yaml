@@ -1,0 +1,9 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: service-tx-producer
+rocketmq:
+  name-server: 192.168.31.113:9876
+  producer:
+    group: tx-producer

@@ -1,0 +1,10 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: service-admin
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+# todo 步骤3：改配置（注册中心）

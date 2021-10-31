@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: service1_v1
+          uri: http://localhost:9000/
+          predicates:
+           - Path=/product/*
+           - Weight=service1, 95
+        - id: service1_v2
+          uri: http://localhost:9001/
+          predicates:
+           - Path=/product/*
+           - Weight=service1, 5

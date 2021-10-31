@@ -1,0 +1,81 @@
+version: "2"
+
+services:
+  admin:
+    image: service-admin:0.0.1-SNAPSHOT
+    container_name: admin
+    ports:
+    - "9080:9080"
+    extra_hosts:
+      - "server-base:192.168.31.154"
+      - "server-app:192.168.31.23"
+  gateway:
+    image: service-gateway:0.0.1-SNAPSHOT
+    container_name: gateway
+    ports:
+      - "9000:9000"
+    extra_hosts:
+      - "server-base:192.168.31.154"
+      - "server-app:192.168.31.23"
+    volumes:
+    - ./skywalking:/home
+    entrypoint: [
+      "java",
+      "-javaagent:/home/agent/skywalking-agent.jar",
+      "-Dskywalking.agent.service_name=gateway",
+      "-Dskywalking.collector.backend_service=server-base:11800",
+      "-jar",
+      "myservice.jar"
+    ]
+  order:
+    image: service-order:0.0.1-SNAPSHOT
+    container_name: order
+    ports:
+      - "8082:8082"
+    extra_hosts:
+      - "server-base:192.168.31.154"
+      - "server-app:192.168.31.23"
+    volumes:
+      - ./skywalking:/home
+    entrypoint: [
+      "java",
+      "-javaagent:/home/agent/skywalking-agent.jar",
+      "-Dskywalking.agent.service_name=order",
+      "-Dskywalking.collector.backend_service=server-base:11800",
+      "-jar",
+      "myservice.jar"
+    ]
+  product:
+    image: service-product:0.0.1-SNAPSHOT
+    container_name: product
+    ports:
+      - "8081:8081"
+    extra_hosts:
+      - "server-base:192.168.31.154"
+      - "server-app:192.168.31.23"
+  score:
+    image: service-score:0.0.1-SNAPSHOT
+    container_name: score
+    ports:
+      - "8083:8083"
+    extra_hosts:
+      - "server-base:192.168.31.154"
+      - "server-app:192.168.31.23"
+    volumes:
+      - ./skywalking:/home
+    entrypoint: [
+      "java",
+      "-javaagent:/home/agent/skywalking-agent.jar",
+      "-Dskywalking.agent.service_name=score",
+      "-Dskywalking.collector.backend_service=server-base:11800",
+      "-jar",
+      "myservice.jar"
+    ]
+  user:
+    image: service-user:0.0.1-SNAPSHOT
+    container_name: user
+    ports:
+      - "8084:8084"
+    extra_hosts:
+      - "server-base:192.168.31.154"
+      - "server-app:192.168.31.23"

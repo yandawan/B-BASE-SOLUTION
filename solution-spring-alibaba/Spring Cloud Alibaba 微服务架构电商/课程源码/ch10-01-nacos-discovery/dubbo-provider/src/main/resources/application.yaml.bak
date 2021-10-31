@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: dubbo-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+dubbo:
+  registry:
+    address: spring-cloud://localhost
+  scan:
+    base-packages: com.example.demo.dubboservice
+  protocol:
+    name: dubbo
+    port: -1
+# todo 步骤4：改配置（添加 nacos,dubbo 相关配置）

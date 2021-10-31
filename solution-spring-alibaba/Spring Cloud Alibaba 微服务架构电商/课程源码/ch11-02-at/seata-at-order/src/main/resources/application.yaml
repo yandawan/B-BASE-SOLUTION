@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: seata-at-order
+  datasource:
+    druid:
+      url: jdbc:mysql://mysql.me:3306/seata_order?allowMultiQueries=true
+      driverClassName: com.mysql.jdbc.Driver
+      username: root
+      password: WJtEhgZYIEFYDCYo
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
+
+# todo todo 步骤2：设置 seata 服务组名
+# todo todo 步骤3：file.conf 中添加服务组名的映射

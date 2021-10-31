@@ -1,0 +1,14 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+      filter:
+        enabled: false
+server:
+  port: 9000

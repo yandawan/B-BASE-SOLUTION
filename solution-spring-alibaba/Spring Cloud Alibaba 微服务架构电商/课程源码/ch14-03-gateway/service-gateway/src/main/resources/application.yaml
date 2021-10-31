@@ -1,0 +1,17 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: service-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: server-base:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+
+# todo 步骤3：添加 nacos 配置
+
+# todo 步骤4：添加路由配置

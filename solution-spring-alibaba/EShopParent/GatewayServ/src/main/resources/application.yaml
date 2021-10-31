@@ -1,0 +1,10 @@
+server:
+  port: 8081
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: product
+          uri: http://localhost:9000
+          predicates:
+            - Host=product.muke.com**

@@ -1,0 +1,35 @@
+server:
+  port: 9002
+spring:
+  cloud:
+    nacos:
+      discovery:
+        service: order-serv
+        group: SEATA_GROUP
+      server-addr: localhost:8848
+  datasource:
+    url: jdbc:mysql://localhost:3306/orderdb
+    username: root
+    password: jianjiang
+  application:
+    name: stock-serv   #此处需要新增 不然seata会报错
+seata:
+  enabled: true
+  tx-service-group: order-service
+  config:
+    type: nacos
+    nacos:
+      namespace: public
+      serverAddr: 127.0.0.1:8848
+      group: SEATA_GROUP
+      userName: "nacos"
+      password: "nacos"
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      serverAddr: 127.0.0.1:8848
+      group: SEATA_GROUP
+      namespace: public
+      userName: "nacos"
+      password: "nacos"

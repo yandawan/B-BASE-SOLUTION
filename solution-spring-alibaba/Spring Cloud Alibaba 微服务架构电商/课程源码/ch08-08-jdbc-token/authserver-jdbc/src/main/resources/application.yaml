@@ -1,0 +1,11 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: authserver-jdbc
+  # todo 步骤4：配置数据库连接
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://mysql.me:3306/oauth2?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: WJtEhgZYIEFYDCYo

@@ -1,0 +1,20 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: partition-producer
+  cloud:
+    stream:
+      default-binder: rabbit
+      bindings:
+        output:
+          destination: topic-test-stream-partition
+          producer:
+            partition-key-expression: headers['partitionKey'] - 1
+            partition-count: 4
+  rabbitmq:
+    addresses: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /

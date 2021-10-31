@@ -1,0 +1,23 @@
+package com.example.demo;
+
+import com.example.demo.mock.api.HelloService;
+import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TestController {
+    // todo 步骤2：声明使用 mock
+    @Reference(check = false, mock = "true")
+    HelloService helloService;
+
+    @GetMapping("/hello")
+    public String hello(@RequestParam String name) {
+        String result = "";
+        // 服务调用
+        result = helloService.hello(name);
+        return result;
+    }
+}

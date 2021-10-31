@@ -1,0 +1,12 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: service-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: route-consumer
+          uri: http://localhost:9091
+          predicates:
+            - Method=GET

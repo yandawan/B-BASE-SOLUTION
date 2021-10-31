@@ -1,0 +1,10 @@
+server:
+  port: 9080
+spring:
+  application:
+    name: admin
+  cloud:
+    nacos:
+      discovery:
+        server-addr: server-base:8848
+# todo [admin] 3.配置 nacos 地址

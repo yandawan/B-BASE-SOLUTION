@@ -1,0 +1,29 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: service-sentinel-nacos
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+      datasource:
+        flow:
+          nacos:
+            serverAddr: localhost:8848
+            dataId: ${spring.application.name}-flow-rules
+            groupId: SENTINEL_GROUP
+            ruleType: FLOW
+            dataType: json
+        degrade:
+          nacos:
+            serverAddr: localhost:8848
+            dataId: ${spring.application.name}-degrade-rules
+            groupId: SENTINEL_GROUP
+            ruleType: DEGRADE
+            dataType: json
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

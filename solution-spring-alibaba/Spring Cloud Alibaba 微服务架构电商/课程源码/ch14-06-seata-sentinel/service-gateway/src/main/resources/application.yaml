@@ -1,0 +1,18 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: server-base:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+    sentinel:
+      transport:
+        dashboard: server-base:8881
+
+# todo [sentinel] 2. 配置 Sentinel

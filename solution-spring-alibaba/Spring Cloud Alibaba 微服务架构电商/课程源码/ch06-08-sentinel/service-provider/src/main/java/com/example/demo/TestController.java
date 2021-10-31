@@ -1,0 +1,40 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TestController {
+
+    @GetMapping("/hi")
+    public String hi() {
+        return "hi";
+    }
+
+    @GetMapping("/hello")
+    public String hello(@RequestParam String name) {
+        return "hello " + name + "!";
+    }
+
+    @GetMapping("/product/phone")
+    public String phone() {
+        return "product phone";
+    }
+
+    @GetMapping("/product/bike")
+    public String bike() {
+        return "bike";
+    }
+
+    @GetMapping("/article/spring")
+    public String spring() {
+        return "article spring";
+    }
+
+    @GetMapping("/article/java")
+    public String java() {
+        return "article java";
+    }
+}

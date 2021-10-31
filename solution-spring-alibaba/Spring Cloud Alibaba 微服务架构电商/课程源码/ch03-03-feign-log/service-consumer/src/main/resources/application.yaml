@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: service-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+logging:
+  level:
+    com.example.demo : debug
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL

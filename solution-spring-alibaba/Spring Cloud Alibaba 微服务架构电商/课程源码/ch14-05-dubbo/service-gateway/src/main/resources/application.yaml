@@ -1,0 +1,15 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: service-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: server-base:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+
+

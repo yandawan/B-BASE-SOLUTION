@@ -1,0 +1,19 @@
+# todo [config] 2. nacos 新建配置，dataID：应用名.扩展名
+# todo [config] 3. 配置 bootstrap.yaml
+# 配置：
+#（1）应用名
+#（2）nacos-config 地址
+#（3）文件扩展名
+#（4）引用公共配置 nacos-discovery.yaml, actuator-endpoint.yaml
+
+spring:
+  application:
+    name: score
+  cloud:
+    nacos:
+      config:
+        server-addr: server-base:8848
+        file-extension: yaml
+        ext-config:
+          - dataId: nacos-discovery.yaml
+          - dataId: actuator-endpoint.yaml

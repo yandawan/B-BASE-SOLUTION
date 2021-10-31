@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: dubbo-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+dubbo:
+  registry:
+    address: spring-cloud://localhost
+  protocol:
+    name: dubbo
+    port: -1
+# todo 步骤3：改配置（添加 nacos,dubbo 相关配置）

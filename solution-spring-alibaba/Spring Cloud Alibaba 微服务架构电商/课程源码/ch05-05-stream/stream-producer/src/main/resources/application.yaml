@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: stream-producer
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: 192.168.31.113:9876
+      bindings:
+        output:
+          destination: topic-test-stream
+        my-output:
+          destination: topic-test-stream-myoutput

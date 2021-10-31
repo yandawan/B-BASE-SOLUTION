@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: service-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: 23ffbc32-5bde-4451-9683-c346220fa282
+        group: g1
+        cluster-name: beijing
+# todo 3. 改配置（添加 nacos 地址）

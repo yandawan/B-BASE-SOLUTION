@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: seata-tcc-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
+
+# todo 3. 配置 nacos, dubbo, seata 服务组
+# todo 4. file.conf 映射服务组
+dubbo:
+  scan:
+    base-packages: com.example.demo.service
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://localhost

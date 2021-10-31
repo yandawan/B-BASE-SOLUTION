@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: service-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+# todo 步骤3：改配置（注册中心、开启端点）

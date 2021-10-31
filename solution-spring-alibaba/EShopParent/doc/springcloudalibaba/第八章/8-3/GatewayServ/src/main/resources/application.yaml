@@ -1,0 +1,22 @@
+server:
+  port: 8081
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: product
+          uri: http://localhost:9000
+          predicates:
+            - Host=product.muke.com**
+        - id: auth
+          uri: http://localhost:5000
+          predicates:
+            - Path=/oauth/token
+        - id: skill
+          uri: http://localhost:13000
+          predicates:
+            - Path=/skill
+  datasource:
+    url: jdbc:mysql://localhost:3306/skill
+    username: root
+    password: jianjiang

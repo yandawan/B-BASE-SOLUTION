@@ -1,0 +1,41 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: order
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    jdbc-url: jdbc:mysql://server-base:3306/shop_order?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 600000
+      maximum-pool-size: 10
+      auto-commit: true
+      pool-name: HikariCP-Order
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+  cloud:
+    nacos:
+      discovery:
+        server-addr: server-base:8848
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
+security:
+  oauth2:
+    client:
+      client-id: client1
+      client-secret: 123456
+    resource:
+      token-info-uri: http://server-app:9000/user/oauth/check_token
+
+dubbo:
+  registry:
+    address: spring-cloud://localhost
+  protocol:
+    port: -1
+    name: dubbo
+

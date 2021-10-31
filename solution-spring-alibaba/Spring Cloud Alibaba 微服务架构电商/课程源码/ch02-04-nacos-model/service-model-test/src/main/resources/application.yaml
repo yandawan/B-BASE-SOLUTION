@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: service-model-test
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: b025e0bb-357c-4ee8-b3fb-39cfad96ae42
+        group: group01
+        cluster-name: beijing

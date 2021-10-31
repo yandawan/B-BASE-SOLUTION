@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: predicate-customize
+  cloud:
+    gateway:
+      routes:
+        - id: route-custom
+          uri: http://localhost:8080
+          predicates:
+            - QueryParams=red,y,blue,y

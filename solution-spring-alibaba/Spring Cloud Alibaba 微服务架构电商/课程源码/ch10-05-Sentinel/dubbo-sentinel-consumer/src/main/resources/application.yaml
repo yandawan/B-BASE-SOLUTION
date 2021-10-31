@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: dubbo-sentinel-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8890
+dubbo:
+  registry:
+    address: spring-cloud://localhost
+  protocol:
+    name: dubbo
+    port: -1
+
+# todo 步骤2：添加 Sentinel 地址

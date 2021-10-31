@@ -1,0 +1,9 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: sleuth-provider
+  sleuth:
+    baggage-keys:
+      - BaggageId
+# todo Provider 步骤1：设置包裹的 key

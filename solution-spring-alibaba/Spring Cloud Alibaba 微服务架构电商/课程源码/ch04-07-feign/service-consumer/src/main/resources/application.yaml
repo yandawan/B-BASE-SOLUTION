@@ -1,0 +1,17 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: service-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

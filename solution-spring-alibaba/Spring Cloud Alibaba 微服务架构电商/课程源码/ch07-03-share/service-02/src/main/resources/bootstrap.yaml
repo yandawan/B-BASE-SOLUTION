@@ -1,0 +1,16 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: service-02
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yml
+        ext-config:
+          - data-id: common.yml
+            group: DEFAULT_GROUP
+            refresh: true
+#        shared-dataids: common.yml
+#        refreshable-dataids: common.yml

@@ -1,0 +1,22 @@
+server:
+  port: 9003
+spring:
+  application:
+    name: partition-consumer
+  cloud:
+    stream:
+      default-binder: rabbit
+      bindings:
+        input:
+          destination: topic-test-stream-partition
+          group: stream-test-partition
+          consumer:
+            partitioned: true
+      instance-index: 3
+      instance-count: 4
+  rabbitmq:
+    addresses: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /

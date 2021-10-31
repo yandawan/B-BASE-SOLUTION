@@ -1,0 +1,35 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: gateway-filter
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      routes:
+        - id: route-lb
+          uri: lb://service-provider
+          predicates:
+            - Path=/**
+
+#        - id: route-strip
+#          uri: http://localhost:8081/hi
+#          predicates:
+#            - Path=/red/**
+#          filters:
+#            - StripPrefix=2
+
+#        - id: route-addrespheader
+#          uri: http://localhost:8081/hi
+#          predicates:
+#            - Method=GET
+#          filters:
+#            - AddResponseHeader=X-Response-Red,Blue
+        - id: route-addheader
+          uri: http://localhost:8081/test/head
+          predicates:
+            - Method=GET
+          filters:
+            - AddRequestHeader=X-Request-red, blue

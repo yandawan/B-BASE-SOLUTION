@@ -1,0 +1,9 @@
+server:
+  port: 9080
+spring:
+  application:
+    name: admin
+  cloud:
+    nacos:
+      discovery:
+        server-addr: server-base:8848

@@ -1,0 +1,13 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: resource-server
+security:
+  oauth2:
+    client:
+      client-id: client1
+      client-secret: 123456
+    resource:
+      token-info-uri: http://localhost:8080/oauth/check_token
+# todo 第3步：改配置（指定客户端信息、授权服务器的验证端点）

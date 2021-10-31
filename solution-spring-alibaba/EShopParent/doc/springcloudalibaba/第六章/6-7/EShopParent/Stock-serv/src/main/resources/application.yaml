@@ -1,0 +1,8 @@
+server:
+  port: 8002
+spring:
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        service: stock-serv

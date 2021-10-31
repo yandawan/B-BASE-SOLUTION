@@ -1,0 +1,17 @@
+server:
+  port: 9002
+spring:
+  cloud:
+    nacos:
+      discovery:
+        service: order-serv
+      server-addr: localhost:8848
+  application:
+    name: order-consumer
+dubbo:
+  application:
+    id: order-consumer
+    name: order-consumer
+  registry:
+    address: nacos://localhost:8848
+    register: false

@@ -1,0 +1,14 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: consumer-group
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: 192.168.31.113:9876
+      bindings:
+        input:
+          destination: topic-consumer-group
+          group: test-group
